@@ -1,0 +1,90 @@
+/* Ajustes de encaixe da versão web. A identidade e as animações estão nos estilos originais. */
+.shell,
+.content,
+.dialog,
+.grid > *,
+.row > *,
+.market-tools > *,
+.market-heading > div,
+.bestiary-display > div {
+  min-width: 0;
+}
+
+.field :is(input, select, textarea) {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.bar {
+  flex-wrap: wrap;
+}
+
+.bar > *,
+.dialog header > * {
+  max-width: 100%;
+}
+
+.card h3,
+.market-item-body strong,
+.market-heading h3,
+.module-tile strong,
+.dialog h2,
+.auth-footnote {
+  overflow-wrap: anywhere;
+}
+
+.dialog {
+  scroll-padding-block: 110px 24px;
+}
+
+/* Os mesmos módulos continuam visíveis; cada botão ocupa a fração disponível. */
+@media (min-width: 760px) {
+  .bottom button {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+/* Empilha somente os campos dos formulários nas telas mais estreitas. */
+@media (max-width: 420px) {
+  .dialog .grid:has(> .field) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Em paisagem, mantém os controles e as sequências dentro da altura útil. */
+@media (max-height: 500px) and (orientation: landscape) {
+  .bottom button {
+    min-height: 58px;
+    padding-block: 4px;
+    gap: 2px;
+  }
+
+  .bottom .glyph {
+    margin-bottom: 0;
+  }
+
+  .bottom button::before {
+    top: 8px;
+    height: 40px;
+  }
+
+  .dialog {
+    max-height: calc(100dvh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  }
+
+  .trans-console {
+    max-height: calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    overflow: auto;
+  }
+
+  .compact-transition .trans-console {
+    margin-top: max(12px, env(safe-area-inset-top));
+  }
+}
+
+@media (max-width: 759px) and (max-height: 500px) and (orientation: landscape) {
+  .shell:not(.auth-shell) {
+    padding-bottom: calc(74px + env(safe-area-inset-bottom));
+  }
+}

@@ -1,6 +1,6 @@
 # Terminal da República Galáctica
 
-Versão web 0.9.8 do aplicativo SW5e. Este repositório contém os arquivos prontos para hospedagem; não contém o projeto Android.
+Versão web 0.9.9 do aplicativo SW5e. Este repositório contém os arquivos prontos para hospedagem; não contém o projeto Android.
 
 ## Hospedagem
 
@@ -17,3 +17,11 @@ O acesso utiliza somente Google. O domínio da hospedagem precisa estar autoriza
 - Ícones, fontes, estilos e imagens incluídos no pacote web.
 
 As regras, os índices e os dados do Firebase não foram alterados nesta atualização.
+
+## Visibilidade em lote
+
+O Mestre pode selecionar vários produtos ou criaturas e mostrar/ocultar a seleção. Selecionar resultados respeita os filtros; Mostrar todos e Ocultar todos incluem o catálogo inteiro e preservam os arquivados. Os controles são exclusivos do Mestre.
+
+## Regras
+
+A nova aba contém uma consulta parcial de criação, atributos/perícias e evolução, com busca e tópicos expansíveis. O livro integral e sua tradução completa ainda dependem do PDF original; essa limitação está identificada na interface.

@@ -1,27 +1,21 @@
-# Terminal da República Galáctica
+# Terminal da República Galáctica — 1.0.1
 
-Versão web 0.9.9 do aplicativo SW5e. Este repositório contém os arquivos prontos para hospedagem; não contém o projeto Android.
-
-## Hospedagem
-
-Sirva a raiz do repositório por HTTPS. No GitHub Pages, use a branch `main` e a pasta `/ (root)`. Os recursos usam caminhos relativos e funcionam no endereço do projeto `/repterminal/`.
-
-O acesso utiliza somente Google. O domínio da hospedagem precisa estar autorizado no Firebase Authentication do projeto configurado no aplicativo.
-
-## Atualizações desta versão
-
-- Interface mobile de terminal com fontes locais e títulos em Aurebesh.
-- Identidade visual própria para o Bazar e transições animadas.
-- Sete anúncios satíricos, incluindo três novas artes: pôr do sol de bolso, conselhos óbvios e fones de silêncio espacial.
-- Anúncios liberados somente cinco segundos após o fim da transição do Bazar, também nas trocas de abas.
-- Ícones, fontes, estilos e imagens incluídos no pacote web.
-
-As regras, os índices e os dados do Firebase não foram alterados nesta atualização.
-
-## Visibilidade em lote
-
-O Mestre pode selecionar vários produtos ou criaturas e mostrar/ocultar a seleção. Selecionar resultados respeita os filtros; Mostrar todos e Ocultar todos incluem o catálogo inteiro e preservam os arquivados. Os controles são exclusivos do Mestre.
+Versão web do aplicativo SW5e. A raiz contém os arquivos prontos para hospedagem HTTPS; no GitHub Pages use main e / (root).
 
 ## Regras
 
-A nova aba contém uma consulta parcial de criação, atributos/perícias e evolução, com busca e tópicos expansíveis. O livro integral e sua tradução completa ainda dependem do PDF original; essa limitação está identificada na interface.
+Consulta com 1.628 tópicos em 87 seções: criação passo a passo, atributos e perícias, trinta espécies, personalidade e vinte antecedentes, dez classes e quarenta arquétipos, equipamentos, multiclasse, 58 talentos, 24 estilos de combate, 24 maestrias e dez formas de sabre de luz.
+
+Busca por palavras em português ou inglês, sem distinção de acentos. O filtro por assunto também reduz a navegação. Os tópicos expansíveis oferecem o inglês para conferência. Tabelas largas têm rolagem lateral. Distâncias em metros e pesos em kg seguem as equivalências de jogo.
+
+A revisão assistida está concluída para o escopo de criação, personalização, classes e equipamentos. Não se afirma revisão humana ou semântica integral de todos os poderes ou do livro inteiro. Pré-requisitos e permissões do Mestre seguem o material fornecido.
+
+## Interface e acesso
+
+Fontes, Aurebesh, identidade do Bazar e animações de terminal foram preservados. O Mestre administra visibilidade individual ou em lote de produtos e criaturas. O Bazar mantém sete anúncios, exibidos cinco segundos após o fim da transição.
+
+Acesso somente Google, com botão Sair. O domínio deve estar autorizado no Firebase Authentication. Nenhum dado, índice ou regra do Firebase foi alterado nesta atualização. Estilos e script recebem a versão no endereço para atualização de cache.
+
+## Validação
+
+Testes de regras, criação, inventário, compras, visibilidade em lote, conversões e busca. Navegador conferido em oito larguras de 320 a 2.560 px, nos perfis de Mestre e jogador, incluindo tabelas de criação, antecedentes, multiclasse e personalização. Login real não foi executado nesta revisão.

@@ -39,9 +39,100 @@
 
 /* Os mesmos módulos continuam visíveis; cada botão ocupa a fração disponível. */
 @media (min-width: 760px) {
+  .shell:not(.auth-shell) {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  .shell:not(.auth-shell) > .content {
+    flex: 1 0 auto;
+    width: 100%;
+    padding-inline: clamp(20px, 2.2vw, 48px);
+  }
+
+  .shell:not(.auth-shell) > .bottom {
+    width: 100%;
+    max-width: none;
+    flex: none;
+    margin-top: auto;
+  }
+
   .bottom button {
     flex: 1 1 0;
     min-width: 0;
+  }
+
+  .spell-list,
+  .bestiary-list,
+  .market-grid,
+  .inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: 14px;
+    align-items: stretch;
+  }
+
+  .spell-list > .card,
+  .inventory-grid > .card {
+    margin: 0;
+  }
+
+  .subsystem-personagens,
+  .subsystem-arquivo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+    gap: 14px;
+    align-content: start;
+    align-items: stretch;
+  }
+
+  :is(.subsystem-personagens, .subsystem-arquivo) > :not(.card) {
+    grid-column: 1 / -1;
+  }
+
+  :is(.subsystem-personagens, .subsystem-arquivo) > .card {
+    margin: 0;
+  }
+
+  .subsystem-mestre {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: start;
+    align-content: start;
+  }
+
+  .subsystem-mestre > .bar,
+  .subsystem-mestre > section:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .subsystem-mestre > .panel {
+    margin: 0;
+  }
+
+  .subsystem-poderes > .panel.grid {
+    grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr));
+  }
+
+  .market-product,
+  .creature-card,
+  .spell-card {
+    min-width: 0;
+    height: 100%;
+  }
+
+  .chat .msg > div {
+    max-width: 85ch;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 1023px) {
+  .subsystem-poderes > .panel.grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
